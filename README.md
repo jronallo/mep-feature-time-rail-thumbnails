@@ -2,7 +2,7 @@
 
 Hover over the time rail on a [MediaElement.js](http://mediaelementjs.com/) player and see video thumbnails.
 
-<video src="http://jronallo.github.io/mep-feature-time-rail-thumbnails/mep-feature-time-rail-thumbnails-example.mp4" controls=""></video>
+[See a video of this in action](http://jronallo.github.io/mep-feature-time-rail-thumbnails/)
 
 ## Use
 
