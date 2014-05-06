@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = MepFeatureTimeRailThumbnails::VERSION
   s.authors     = ["Jason Ronallo"]
   s.email       = ["jronallo@gmail.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/jronallo/mep-feature-time-rail-thumbnails"
   s.summary     = "MediaElement.js Plugin for Preview Thumbnails"
   s.description = "Add a thumbnail preview to the MediaElement.js player."
 
