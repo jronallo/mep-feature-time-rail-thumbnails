@@ -2,6 +2,8 @@
 
 Hover over the time rail on a [MediaElement.js](http://mediaelementjs.com/) player and see video thumbnails.
 
+<video src="http://jronallo.github.io/mep-feature-time-rail-thumbnails/mep-feature-time-rail-thumbnails-example.mp4" controls=""></video>
+
 ## Use
 
 To use this feature you will first need to create an image sprite and a metadata WebVTT file.
