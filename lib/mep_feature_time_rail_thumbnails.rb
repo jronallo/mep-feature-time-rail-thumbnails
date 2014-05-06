@@ -1,0 +1,4 @@
+require "mep_feature_time_rail_thumbnails/engine"
+
+module MepFeatureTimeRailThumbnails
+end
