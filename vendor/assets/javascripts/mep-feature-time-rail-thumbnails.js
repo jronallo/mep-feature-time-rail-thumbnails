@@ -5,6 +5,17 @@
       if (!player.isVideo)
         return;
 
+      // This relies on mutation observers right now, so if those aren't available just
+      // abandon it.
+      if (!window.MutationObserver)
+        return;
+
+      // Check for presence of WebVTT
+      if (!WebVTT) {
+        console.log('mep-feature-time-rail-thumbnails.js requires vtt.js');
+        return;
+      }
+
       function getVttCues(url) {
         var vtt,
         parser = new WebVTT.Parser(window, WebVTT.StringDecoder()),
@@ -39,7 +50,9 @@
       }
 
       function setThumbnailImage(url) {
-        $('.mejs-plugin-time-float-thumbnail').css('background-image','url(' + url.split('#')[0] + ')');
+        // Make sure the url is protocol/scheme relative
+        var protocol_relative_url = url.substr(url.indexOf('://')+1);
+        $('.mejs-plugin-time-float-thumbnail').css('background-image','url(' + protocol_relative_url.split('#')[0] + ')');
       }
 
       var
