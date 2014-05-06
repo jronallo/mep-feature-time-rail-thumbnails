@@ -75,6 +75,10 @@ $('video').mediaelementplayer({
 
 This JavaScript plugin is made available as both a Rails Engine gem for the asset pipeline (unreleased) and a bower package. Choose your poison.
 
+### vtt.js
+
+This plugin relies on the [vtt.js](https://github.com/mozilla/vtt.js/tree/master) library for WebVTT parsing. You'll need to include this before including mep-feature-time-rail-thumbnails.js.
+
 ### Rails
 
 Include it in your Gemfile:
@@ -96,10 +100,13 @@ bower i mep_feature_time_rail_thumbnails
 
 The file you want is at `bower_components/mep_feature_time_rail_thumbnails/vendor/assets/javascripts/mep-feature-time-rail-thumbnails.js`
 
+The latest vtt.js is not currently available from bower.
+
 ## TODO
 
 - Make the interval of thumbnails configurable or really use the timestamps in the WebVTT file rather than relying on 5 second increments.
 - Allow to work over HTTP and HTTPS.
+- Update bower.json dependencies and instructions when [this bug](https://github.com/mozilla/vtt.js/issues/311) is closed.
 
 ## Author
 
