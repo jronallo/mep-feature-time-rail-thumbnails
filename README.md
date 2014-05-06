@@ -1,6 +1,6 @@
 # MediaElement.js Plugin for Preview Thumbnails
 
-Hover over the time rail on a [MediaElement.js](http://mediaelementjs.com/) player, and see video thumbnails.
+Hover over the time rail on a [MediaElement.js](http://mediaelementjs.com/) player and see video thumbnails.
 
 ## Use
 
@@ -77,7 +77,7 @@ This JavaScript plugin is made available as both a Rails Engine gem for the asse
 
 Include it in your Gemfile:
 ```ruby
-gem 'mep_feature_time_rail_thumbnails', git: 'git@github.com:jronallo/mep-feature-time-rail-thumbnails.git'
+gem 'mep_feature_time_rail_thumbnails'
 ```
 
 Add it to your application.js:
