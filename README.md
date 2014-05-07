@@ -4,6 +4,8 @@ Hover over the time rail on a [MediaElement.js](http://mediaelementjs.com/) play
 
 [See a video of this in action](http://jronallo.github.io/mep-feature-time-rail-thumbnails/)
 
+See it in action on the [NCSU Libraries Rare & Unique Digital Collection site](http://d.lib.ncsu.edu/collections/catalog?f%5Bformat%5D%5B%5D=Video).
+
 ## Use
 
 To use this feature you will first need to create an image sprite and a metadata WebVTT file.
