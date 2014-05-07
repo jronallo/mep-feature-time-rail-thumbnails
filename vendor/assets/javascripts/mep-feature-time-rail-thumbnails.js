@@ -96,6 +96,9 @@
         time_float.find('.mejs-time-float-current').css('position', 'static');
         time_float.find('.mejs-plugin-time-float-thumbnail').css('position', 'static');
 
+        time_float.css('-webkit-border-radius', '0').css('border-radius', '0');
+        time_float.find('span').css('-webkit-border-radius', '0').css('border-radius', '0');
+
         setThumbnailImage(cues[0].text);
 
         // Add an observer to the .mejs-time-float-current and change the thumbnail
