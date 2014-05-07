@@ -1,6 +1,6 @@
 {
   "name": "mep_feature_time_rail_thumbnails",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/jronallo/mep-feature-time-rail-thumbnails",
   "authors": [
     "Jason Ronallo <jronallo@gmail.com>"
@@ -22,5 +22,8 @@
     "Gemfile",
     "Gemfile.lock",
     "mep_feature_time_rail_thumbnails.gemspec"
-  ]
+  ],
+  "dependencies": {
+    "vtt.js": "0.11.7"
+  }
 }

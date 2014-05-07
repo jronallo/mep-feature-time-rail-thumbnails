@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mep_feature_time_rail_thumbnails (0.0.1)
+    mep_feature_time_rail_thumbnails (0.0.3)
       rails (>= 3.2.17)
 
 GEM

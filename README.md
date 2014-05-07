@@ -103,9 +103,13 @@ Install with bower:
 bower i mep_feature_time_rail_thumbnails
 ```
 
-The file you want is at `bower_components/mep_feature_time_rail_thumbnails/vendor/assets/javascripts/mep-feature-time-rail-thumbnails.js`
+This will install [vtt.js](https://github.com/mozilla/vtt.js) as well.
 
-The latest vtt.js is not currently available from bower.
+Include them both in HTML:
+```html
+<script src="/bower_components/vtt.js/vtt.min.js"></script>
+<script src="/bower_components/mep_feature_time_rail_thumbnails/vendor/assets/javascripts/mep-feature-time-rail-thumbnails.js"></script>
+```
 
 ## Browser Support
 
