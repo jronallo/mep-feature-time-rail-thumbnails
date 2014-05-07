@@ -117,8 +117,7 @@ The plugin currently uses [MutationObserver](http://caniuse.com/mutationobserver
 
 ## TODO
 
-- Make the interval of thumbnails configurable or really use the timestamps in the WebVTT file rather than relying on 5 second increments.
-- Update bower.json dependencies and instructions when [this bug](https://github.com/mozilla/vtt.js/issues/311) is closed.
+- Make the interval of thumbnails really use the timestamps in the WebVTT file rather than relying on configuration and regular intervals.
 
 ## Author
 
