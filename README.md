@@ -10,7 +10,7 @@ To use this feature you will first need to create an image sprite and a metadata
 
 ### Create an Image Sprite
 
-The idea is to take a snapshot of your video every 5 seconds and then stitch the images together into a sprite. This means that only one image file needs to be requested from the server and switching between thumbnails can be very quick. 
+The idea is to take a snapshot of your video every N seconds and then stitch the images together into a sprite. This means that only one image file needs to be requested from the server and switching between thumbnails can be very quick. 
 
 Here's one way you could create the image sprite using ffmpeg and montage (from ImageMagick):
 
@@ -48,8 +48,10 @@ http://example.com/video-name-sprite.jpg#xywh=0,100,150,100
 ```
 
 #### Current Sprite Limitations
-- All the images embedded in the sprite should have exactly the same dimensions. The styling for the thumbnail hover area is calculated based on the dimensions of the first URL in the WebVTT file.
-- Images should only be taken every 5 seconds. While this ought to be configurable in the future it currently is not.
+
+All the images embedded in the sprite should have exactly the same dimensions. The styling for the thumbnail hover area is calculated based on the dimensions of the first URL in the WebVTT file.
+
+The durations that each thumbnail ought to show should be consistent. The default is 5 seconds, though this is configurable when initializing the player.
 
 ### Markup
 
@@ -67,9 +69,12 @@ Add 'timerailsthumbnails' as the last feature when initializing the mediaelement
 
 ```javascript
 $('video').mediaelementplayer({
-   features: ['playpause','progress','current','duration','tracks','volume', 'timerailthumbnails']
+   features: ['playpause','progress','current','duration','tracks','volume', 'timerailthumbnails'],
+    timeRailThumbnailsSeconds: 5
 });
 ```
+
+Also, either use the default of 5 second intervals for each thumbnail or set `timeRailThumbnailsSeconds` to the appropriate value.
 
 ## Installation
 
@@ -105,7 +110,6 @@ The latest vtt.js is not currently available from bower.
 ## TODO
 
 - Make the interval of thumbnails configurable or really use the timestamps in the WebVTT file rather than relying on 5 second increments.
-- Allow to work over HTTP and HTTPS.
 - Update bower.json dependencies and instructions when [this bug](https://github.com/mozilla/vtt.js/issues/311) is closed.
 
 ## Author

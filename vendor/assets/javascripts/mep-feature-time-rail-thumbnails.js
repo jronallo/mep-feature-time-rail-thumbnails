@@ -60,7 +60,14 @@
         element_to_observe = player.container.find('.mejs-time-float-current')[0],
         video_thumbnail_vtt_url,
         cues,
-        preview_thumbnails_track = mediaContainer.find("track[kind='metadata'].time-rail-thumbnails");
+        preview_thumbnails_track = mediaContainer.find("track[kind='metadata'].time-rail-thumbnails"),
+        time_rail_thumbnails_seconds;
+
+      if (player.options.timeRailThumbnailsSeconds) {
+        time_rail_thumbnails_seconds = player.options.timeRailThumbnailsSeconds;
+      } else {
+        time_rail_thumbnails_seconds = 5;
+      }
 
       if (preview_thumbnails_track.length > 0) {
         video_thumbnail_vtt_url = preview_thumbnails_track.attr('src');
@@ -108,9 +115,7 @@
           if (seconds == 0) {
             cue = cues[0];
           } else {
-            // FIXME: Change 5 to be configurable for the number of tiles across
-            // or actually look up the time cues to see which cue to look into.
-            var tile = Math.floor(seconds / 5);
+            var tile = Math.floor(seconds / time_rail_thumbnails_seconds);
             cue = cues[tile + 1];
           }
 
