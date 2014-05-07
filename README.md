@@ -107,6 +107,10 @@ The file you want is at `bower_components/mep_feature_time_rail_thumbnails/vendo
 
 The latest vtt.js is not currently available from bower.
 
+## Browser Support
+
+The plugin currently uses [MutationObserver](http://caniuse.com/mutationobserver) and is disabled for browsers without support. You may be able to use a polyfill, but I have not tried that yet.
+
 ## TODO
 
 - Make the interval of thumbnails configurable or really use the timestamps in the WebVTT file rather than relying on 5 second increments.
