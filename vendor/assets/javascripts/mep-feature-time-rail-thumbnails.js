@@ -52,7 +52,7 @@
       function setThumbnailImage(url) {
         // Make sure the url is protocol/scheme relative
         var protocol_relative_url = url.substr(url.indexOf('://')+1);
-        $('.mejs-plugin-time-float-thumbnail').css('background-image','url(' + protocol_relative_url.split('#')[0] + ')');
+        $('.mejs-plugin-time-float-thumbnail').css('background-image','url("' + protocol_relative_url.split('#')[0] + '")');
       }
 
       var
